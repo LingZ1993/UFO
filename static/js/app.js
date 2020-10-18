@@ -52,7 +52,6 @@ function updateFilters() {
   
     // 8. Set the filtered data to the tableData.
     let filteredData = tableData
-    let filteredData2 = filters
     console.log("++++++++")
     console.log(Object.entries((filteredData)))
     console.log("++++++++")
@@ -61,8 +60,6 @@ function updateFilters() {
     // matches the filter values
     Object.entries((filteredData)).forEach(([filteredId, value]) => {
       filteredData = filteredData.filter(row[filteredID] === value);
-      console.log("YOU ARE IN THE FOREACH LOOP")
-      console.log(filteredData)
     })
   
     // 10. Finally, rebuild the table using the filtered data
